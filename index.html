@@ -1,0 +1,399 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	</head>
+
+    <body>
+		
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+      
+	  
+	  <!--Top navbar-->
+	  <!--Start top navbar-->
+	  <div class="navbar-fixed" style="top:0">
+	  <nav class="nav-extended black" >
+		  <div class="nav-wrapper">
+		  <div class="container">
+			<a href="index.html" class="brand-logo left"><h4>E's BUCKET</h4> </a>
+			<div>
+			<ul class="right hide-on-med-and-down" style="z-depth:0">
+				  <li><a target="_self" href="index.html"><span class="white-text" style="font-size:20px">最新新聞</span></a></li>
+				  <li><a target="_self" href="index.html"><span class="white-text" style="font-size:20px">教學影片</span></a></li>
+				  <li><a target="_self" href="#"><span class="white-text" style="font-size:20px">球鞋合集</span></a></li>
+				  <li><a target="_self" href="#"><span class="white-text" style="font-size:20px">關於站主</span></a></li>
+			</ul>
+			</div>
+			</div>
+	  <!--SideMenu-->
+			<a href="#" data-activates="mobile-demo" class="button-collapse right"><i class="material-icons">menu</i></a>
+			<ul class="side-nav black" style="width:250px" id="mobile-demo">
+				<li><a target="_self" href="index.html"><span class="white-text"><h5>最新新聞</h5></span></a></li>
+				<div class="divider"></div>
+				<li><a target="_self" href="index.html"><span class="white-text"><h5>教學影片</h5></span></a></li>
+				<div class="divider"></div>
+				<li><a target="_self" href="#"><span class="white-text"><h5>附近體育用品店</h5></span></a></li>
+				<div class="divider"></div>
+				<li><a target="_self" href="#"><span class="white-text"><h5>關於站主</h5></span></a></li>
+				<div class="divider"></div>
+			</ul>
+		  </div>
+		  
+	  <!--End SideMenu-->
+
+	  <!--Normal Menu-->
+	    <div class="nav-content hide" style="height:50px;">
+		  <div class="row" >
+		    <ul class="tabs tab-transparent black" style="z-depth:0">
+				  <li class="tab col s3"><a target="_self" href="index.html"><span class="white-text"><h6>最新新聞</h6></span></a></li>
+				  <li class="tab col s3"><a target="_self" href="index.html"><span class="white-text"><h6>教學影片</h6></span></a></li>
+				  <li class="tab col s3"><a target="_self" href="#"><span class="white-text"><span class="white-text"><h6>球鞋合集</h6></span></a></li>
+				  <li class="tab col s3"><a target="_self" href="#"><span class="white-text"><span class="white-text"><h6>關於站主</h6></span></a></li>
+			</ul>
+		  </div>
+		</div>
+
+		<!--End Normal Menu-->
+	  </nav>
+	  </div>
+	  <!--End top navbar-->
+    
+	<br>
+	<br>
+	
+		<div class="row">
+		<div class="col s12">
+		<div class="container">
+		<ul class="tabs">
+        <li class="tab col s2 "><a href="" onclick="CallData('basketballfanszone')"><span class="black-text" style="font-size:25px;font-weight:bold">Fanpiece</span></a></li>
+        <li class="tab col s2"><a class="active" onclick="CallData('nba.taiwan')" href=""><span class="black-text" style="font-weight:bold">NBA (TW)</span></a></li>
+        <li class="tab col s2"><a href="" onclick="CallData('nba')" ><span class="black-text" style="font-weight:bold">NBA (ESPN)</span></a></li>
+		</ul>
+		</div>
+		<div class="divider col s12 grey lighten-3" style="padding:1.5px"></div>
+		</div>
+		</div>
+		
+		
+	<div class="container">
+	<div class="section white">
+		<h4> &nbsp &nbsp Hotest News</h4>
+		<div class="row">
+		<div class="col s10 m3 divider" style="position:relative;left:30px;"></div>
+		</div>
+		<div class="row">
+		<div class="col s12 m8">
+		<div class="row">
+		<div class="col s12 m12" id="heatslide">
+			<div class="card z-depth-0" >
+			<div class="slider" >
+			<ul class="slides">
+			<li>	
+			<img id="h1img" src="" class="facebook-pics responsive-img"> <!-- random image -->
+			<div id="h1word" class="card-content" style="position:absolute;top:300px;height:70px;width:80%;background-color:rgba(97, 97, 97, 0.8)" >
+			</div>
+			</li>
+			<li>
+			<img id="h2img" src="" class="facebook-pics responsive-img"> <!-- random image -->
+			<div id="h2word" class="card-content" style="position:absolute;top:300px;height:70px;width:80%;background-color:rgba(97, 97, 97, 0.8)" >
+			</div>
+			</li>
+			<li>
+			<img id="h3img" src="" class="facebook-pics responsive-img"> <!-- random image -->
+			<div id="h3word" class="card-content" style="position:absolute;top:300px;height:70px;width:80%;background-color:rgba(97, 97, 97, 0.8)" >
+			</div>
+			</li>
+			<li>
+			<img id="h4img" src="" class="facebook-pics responsive-img"> <!-- random image -->
+			<div id="h4word" class="card-content" style="position:absolute;top:300px;height:70px;width:80%;background-color:rgba(97, 97, 97, 0.8)" >
+			</div>
+			</li>
+			</ul>
+			</div>
+		</div>
+		<br>
+		<h5> &nbsp &nbsp Latest News</h5>
+		<button onclick="changeCol(1)">click me</button>
+		<button onclick="changeCol(0)">click me</button>
+		<div class="divider grey lighten-3"> </div>
+		<br>
+		</div>
+		<div class="col s12 m12 hide-on-small-only" id="demo">
+		
+		</div>
+		<div class="col s12 hide-on-med-and-up" id="demo1">
+		</div>
+		</div>
+		</div>
+		
+	  <div class="col s12 m4" style="background-color:#e0e0e0;">
+		<div class="row" >
+		<div class="col s12 m12" >
+		<br style="color:#e0e0e0">
+		<a class="twitter-timeline" data-height="600" data-link-color="black" href="https://twitter.com/ESPNNBA?ref_src=twsrc%5Etfw">Tweets by ESPNNBA</a> 
+		</div>
+		</div>
+		<br>
+	  </div>
+	  </div>
+	  </div>
+	  </div>
+	  
+	  
+	  <!--Build bottom navbar-->
+	  <div class="navbar-fixed" >
+	  <nav class="nav black hide-on-med-and-up" style="bottom:0;">
+		<div class="divider white" style="padding:1px"></div>
+		<div class="nav-wrapper" style="height:50px;">
+		  <div class="row" >
+			<ul class="black" style="z-depth:0">
+				<li class="col s3"><a href="index.html"><span class="white-text"><i class="material-icons center">description</i></span></a></li>
+				<li class="col s3"><a href="index.html"><span class="white-text"><i class="material-icons center">video_library</i></span></a></li>
+				<li class="col s3"><a href="#"><span class="white-text"><i class="material-icons center">stars</i></span></a></li>
+				<li class="col s3"><a href="#"><span class="white-text"><i class="material-icons center">supervisor_account</i></span></a></li>
+				
+			</ul>
+		  </div>
+		</div>
+	  </nav>
+	  </div>
+	  
+	  <footer class="page-footer black" style="buttom:10px">
+          <div class="container">
+            <div class="row">
+              <div class="col l6 s12">
+                <h5 class="white-text">E's BUCKET 期末報告 </h5>
+              </div>
+            </div>
+          </div>
+          <div class="footer-copyright">
+            <div class="container" >
+				© 2017 Copyright Text
+				<div class="white-text text-lighten-4 right">By:重修後不想被當的學生</div>
+            </div>
+          </div>
+    </footer>  
+	  
+	  
+	<style>
+
+	
+		.tabs .indicator { background-color: black;}
+		.foo{
+	font-size:18px;
+	font-weight:bold;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+	color:black;
+	height:80px;
+
+	}
+	.foom{
+	font-size:18px;
+	font-weight:bold;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+	color:black;
+	height:50px;
+	text-align:center;
+	}
+	.foo2{
+	width:50ch;
+	font-weight:bold;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+	color:black;
+	}
+	.foi{
+    white-space: nowrap;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+	family-weight:bold;
+	font-size:20px;
+	}
+	
+
+
+	</style>	
+	
+	<script>
+		window.onload = function(){
+			CallData('basketballfanszone');
+			}
+		
+		function changeCol(id){
+		  var elements = document.getElementsByClassName("changingcol");
+		  var length = elements.length;
+		  var i;
+		  for(i=0;i<length;i++){
+		  if(id==1){
+		  elements[i].className = "col m12 changingcol";}
+		  else{
+		  elements[i].className = "col m6 changingcol";}
+		  }
+		  var elements = document.getElementsByClassName("changingcolcard");
+		  for(i=0;i<length;i++){
+		  if(id==1){
+		  elements[i].className= "card horizontal z-depth-0 changingcolcard";
+		  elements[i].style.height="160px";
+		  }
+		  else{
+		  elements[i].className= "card z-depth-0 changingcolcard";
+		  elements[i].style.height="320px";
+		  }
+		  }
+		  
+		  var elements = document.getElementsByClassName("changingimg");
+		  for(i=0;i<length;i++){
+		  if(id==1){elements[i].className= "facebook-pics responsive-img changingimg";
+		  elements[i].style.height="150px";}
+		  else{
+		  elements[i].style.height="220px";
+		  }
+		  }
+		  
+		  var elements = document.getElementsByClassName("changingtype");
+		  for(i=0;i<length;i++){
+		  if(id==1){
+		  elements[i].className= "card-content changingtype";}
+		  else{
+		  elements[i].className= "card-title changingtype";
+		  }
+		  }
+		  
+		  var elements = document.getElementsByClassName("changingfoo");
+		  for(i=0;i<length;i++){
+		  if(id==1){
+		  elements[i].className= "foo2 black-text changingfoo";}
+		  else{
+		  elements[i].className= "foo changingfoo";
+		  }
+		  }
+		  
+		  var elements = document.getElementsByClassName("changingdivider");
+		  for(i=0;i<length;i++){
+		  if(id==1){
+		  elements[i].className= "divider changingdivider";
+		  elements[i].style.padding="1.5px";}
+		  else{
+		  elements[i].className= "changingdivider";
+		  elements[i].style.padding= "0px";}
+		  }
+		  
+		  }
+		 
+		  
+		$(".button-collapse").sideNav();
+		$(document).ready(function(){
+			$('ul.tabs').tabs();
+		});
+		$(document).ready(function(){
+		$('ul.tabs').tabs('select_tab', 'tab_id');
+		});
+		$(document).ready(function(){
+		$('.slider').slider();
+		});
+		<!--load fb news-->
+		function CallData(x){
+		var xmlhttp = new XMLHttpRequest();
+		var url = 'https://graph.facebook.com/'+x+'/posts?access_token=1543275045740204|f-WLuHSS2j0Bv7SvvvBa-lE7V6k&fields=message,full_picture,likes.limit(1).summary(1),link&limit=8';
+
+		xmlhttp.onreadystatechange = function() {
+		if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+			var myArr = JSON.parse(xmlhttp.responseText);
+			myFunction(myArr);
+			heatarticle(myArr);
+			mobileway(myArr);
+			}
+		}
+		
+		xmlhttp.open("GET", url, true);
+		xmlhttp.send();
+		
+		function heatarticle(arr){
+			var data = arr.data;
+			var temp = new Array(data.length);
+			var tempurl = new Array(data.length);
+			var text = "";
+			var i;
+			var u;
+				for(i=0;i<data.length;i++){
+				u = data[i].likes.summary.total_count;
+				temp[i]= u ;		
+				}
+				for(i=0;i<4;i++){
+				var k = i+1;
+				u = temp.indexOf(Math.max(...temp));
+				document.getElementById('h'+k+'img').src= data[u].full_picture;
+				document.getElementById('h'+k+'word').innerHTML = '<a href="'+data[u].link+'"><span class="white-text foi")">'+data[u].message+'</span></a>';
+				temp[u]=0;
+				}
+		}
+		
+		function myFunction(arr) {
+			var data = arr.data;
+			var text = "";
+			var i;
+			for(i =0;i<data.length;i++){
+				text += '<div class="col s12 m6 changingcol">';
+				text += '<div class="card z-depth-0 changingcolcard" style="height:320px">';
+				text += '<div class="card-image" >';
+				text += '<img src="' + data[i].full_picture + '" class="facebook-pics responsive-img changingimg" style="width:100%;height:220px;" id="pic' + i+1 + '"/>';
+				text += '</div>';
+				text += '<div>';
+				text += '  <div class="card-title changingtype">';
+				text += '<a href="' + data[i].link + '" target="_blank"><p class="foo changingfoo">【' + data[i].message + '】</p></a>';
+				text += ' </div>'; 	
+				text += '</div>';
+				text += ' </div>';
+				text += '<div class="changingdivider">' ;
+				text += '</div>' ;
+				text += '</div>';
+			}
+				document.getElementById("demo").innerHTML = text;
+		}
+		
+		function mobileway(arr) {
+			var data = arr.data;
+			var text = "";
+			var i;
+			for(i =0;i<data.length;i++){
+				
+				text += '<div class="col s12">';
+				text += '<div class="card z-depth-0" style="height:260px">';
+				text += '<div class="card-image">';
+				text += '<img src="' + data[i].full_picture + '" class="facebook-pics responsive-img" style="width:100%;height:200px;" id="pic' + i+1 + '"/>';
+				text += '</div>';
+				text += '  <div class="card-title">';
+				text += '<a href="' + data[i].link + '" target="_blank"><p class="foom s12 offset-s1" id="foo">' + data[i].message + '</p></a>';
+				text += ' </div>';
+				text += ' </div>';
+				text += '<div class="divider">';
+				text += '</div>' ;
+				text += '<br>' ;
+				text += '</div>';
+				
+			}
+				document.getElementById("demo1").innerHTML = text;
+		}
+		
+		
+		}
+    </script>  
+    
+	</body>
+  </html>
+  
+	

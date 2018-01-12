@@ -1,0 +1,181 @@
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+	  <link type="text/css" rel="stylesheet" href="css/style.css" media="screen,projection"/>
+
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+	  
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script type="text/javascript" src="js/materialize.min.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.8.1/firebase.js"></script>
+	<script>
+	(function init(document, $) {
+		var now = new Date;
+		var ms_id = "ms"+now.getTime();
+		var username;
+		var icons="./img/boy.png";
+		var id_check;
+		
+		// Initialize Firebase
+		var config = {
+			apiKey: "AIzaSyCk3cS75CyHdIagOLMJ5ngj7-xSDkpbNWk",
+			authDomain: "mischatroom-b63b1.firebaseapp.com",
+			databaseURL: "https://mischatroom-b63b1.firebaseio.com",
+			projectId: "mischatroom-b63b1",
+			storageBucket: "mischatroom-b63b1.appspot.com",
+			messagingSenderId: "921148971057"
+		};
+		
+		firebase.initializeApp(config);
+		
+		
+		var data = firebase.database().ref("chat");
+
+		function scrollToBottom() {
+		message_box.scrollTop = message_box.scrollHeight;
+		}
+		
+		
+		$(document).ready(function(){
+			$('#open').on('click',function(){
+				if($('#login_name').val()!=''){
+					username=$('#login_name').val();}
+				if($('#icon_url').val()!=''){
+					icons=$('#icon_url').val();}
+				$('#loading').toggleClass('container hide');
+				$('#chatting').toggleClass('hide container');
+				
+				
+				data.on('child_added',function(snapshot){
+				var message = snapshot.val();
+				showMessage(message.name,message.messages,message.icon,message.id);
+		});
+			
+			});
+			
+			$('#input_message').keypress(function(e){
+				if(e.keyCode==13&&$('#input_message').val()!=""){
+					event.preventDefault();
+					$('#send').click();}
+				});
+			
+			
+			$('#send').on('click',function(){
+				var text=$('#input_message').val();
+				
+				data.push({
+				name:username,
+				icon:icons,
+				messages:text,
+				id:ms_id
+				});
+				scrollToBottom();
+				$('#input_message').val("");
+			});
+		
+			$('#girl_icon').on('click',function(){
+				icons=$('#girl_icon').val();
+			});
+			
+			$('#boy_icon').on('click',function(){
+				icons=$('#boy_icon').val();
+			});
+		
+		});
+		
+		
+		
+		function showMessage(name,message,icon,id){
+				var check_m;
+				if($('#login_name').val()==name){
+				check_m="self";}
+				else{
+				check_m="friend";}
+				
+			$('#message_box').append(
+				'<div id="'+ id +'" class="m '+ check_m +'">'+
+				'<div class="usericon">'+
+				'<img src="'+icon+'">'+
+				'</img>'+
+				'</div>'+
+				'<p class="message">'+
+				'<span class="name">'+name+
+				'</span>'+'<br>'+message+
+				'</p>'+
+				'</div>');
+				scrollToBottom();
+				};
+			
+
+		
+		}(document, jQuery));
+	</script>
+			
+		</script>
+	</head>
+
+    <body>
+		
+		
+      
+	  
+	  
+	  
+	  
+    
+	<!--Start content-->
+		<button id="scrolling" class="hide"></button>
+		<div id="loading" class="container">
+		<div class="row">
+		<div class="loading_box col row s12 m4 offset-m4">
+		
+		<input placeholder="Please enter username" id="login_name" type="text" class="validate col s12 center">
+		<input placeholder="Put icon url or choose boy_icon / girl_icon" id="icon_url" class="validate col s12 center">
+		<button id="boy_icon" value="./img/boy.png" class="btn col s6">Boy</button>
+		<button id="girl_icon" value="./img/girl.png" class="btn col s6">Girl</button>
+		<button id="open" class="keep btn col s6 offset-s3"style="margin-top:20px;margin-bottom:15px;">Login</button>
+		
+		</div>
+		</div>
+		</div>
+		
+		
+		
+		
+		<div id="chatting" class="hide">
+		<div class="row">
+		<div id="chat_box" class="chat_box col s12 m6 offset-m3">
+		<div id="message_box" class="message_box">
+
+
+		</div>
+		<div id="input_box" class="row col s12" >
+			<textarea id="input_message" class="col s10 m10"></textarea>
+			<button id="send" class="btn waves-effect waves-light col s2 m2" type="submit" for="input_message" style="background:#90caf9;"><i class="material-icons">send</i></button>
+			
+		</div>
+		</div>
+		</div>
+		</div>
+	
+
+		
+	<!--style-->
+		<style>
+	
+		</style>	
+	<!--script-->
+		<script>
+
+		</script>
+	
+    </body>
+  </html>
+  
+	
